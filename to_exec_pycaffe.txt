@@ -1,0 +1,5 @@
+#! /bin/sh
+export CAFFE_ROOT=deep-supervised-hashing-DSH/
+export PYTHONPATH=deep-supervised-hashing-DSH/python:$PYTHONPATH
+export LD_LIBRARY_PATH=deep-supervised-hashing-DSH/OpenBLAS
+

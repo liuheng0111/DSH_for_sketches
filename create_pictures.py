@@ -47,7 +47,7 @@ def save_image(mat,file_name):
 #Script para generar base de dato para caffe
 def main():
     if len(sys.argv)<=2:
-        print("Uso: create_pictures.py input_quickdraw_dir output_quickdraw_dir offset(opcional)")
+        print("Uso: create_pictures.py input_quickdraw_dir output_quickdraw_dir offset(op) cantidad(op) ")
         return
     input_dir = sys.argv[1]
     output_dir = sys.argv[2]
@@ -57,6 +57,9 @@ def main():
     offset = 0
     if len(sys.argv)>3:
         offset = int(sys.argv[3])
+    N = 10000
+    if len(sys.argv)>4:
+        N = int(sys.argv[4])
     #obtener categorias
     #categories = []
     #for fname in os.listdir(input_dir):
@@ -66,13 +69,17 @@ def main():
     #cargar categorias reales
 
     categories = []
-    cat_file = open('categories.txt')    
+   # cat_file = open('categories.txt') 
+    cat_finename = 'categories.txt'
+    if len(sys.argv)>5:
+        cat_finename = sys.argv[5]
+    cat_file = open(cat_filename)
     for linea in cat_file:
         linea = linea.strip().split(' ')
         categories.append(" ".join(linea[1:]))
     print("Numero de categorias totales: "+str(len(categories)))
 
-    N=10000 #10000 imagenes por categoria
+#    N=10000 #10000 imagenes por categoria
     itemid = 0
     train_file = open(output_dir+os.sep+"train.txt","w")
     for c in range(len(categories)):

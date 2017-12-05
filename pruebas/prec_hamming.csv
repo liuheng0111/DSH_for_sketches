@@ -1,0 +1,9 @@
+Net/dataset	dataset_1	dataset_2	dataset_3
+Modificado	0.1212	0.118	0.1372	
+Modificado con Finetune	0.1062	0.1042	0.1068	
+Modificado Small	0.1104	0.0892	0.0896	
+Modificado Small con Finetune	0.127	0.137	0.1488	
+Normal	0.1	0.091	0.124	
+Normal con Finetune	0.1248	0.1048	0.0814	
+Normal Small	0.1232	0.1034	0.1228	
+Normal Small con Finetune	0.1012	0.101	0.1002	

@@ -115,7 +115,7 @@ void HashingLossLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>& top,
 }
 
 #ifdef CPU_ONLY
-STUB_GPU(HashingLossLayer);
+//STUB_GPU(HashingLossLayer);
 #endif
 
 INSTANTIATE_CLASS(HashingLossLayer);

@@ -1,0 +1,10 @@
+backpack
+bear
+cactus
+clock
+computer
+fish
+flower
+hand
+house
+pig
